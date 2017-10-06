@@ -64,11 +64,11 @@ alexaApp.intent("AMAZON.CancelIntent", {
 alexaApp.intent("QuoteIntent", {
     "slots": { "NAME": "LITERAL" },
     "utterances": [
-      "my {name is|name's} {names|NAME}", "set my name to {names|NAME}"
+      "for a quote", "I need more miz", "I want a miz quote", "Miz quote", "Give me a random Miz Quote"
     ]
   },
   function(request, response) {
-    response.say("Success!");
+    response.say(getRandomMizQuote()).shouldEndSession(true);
   }
 );
 
