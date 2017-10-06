@@ -27,8 +27,7 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
-  response.say(getRandomMizQuote()).shouldEndSession(true);
-
+  response.say('Welcome to Random Miz Quotes. You can say: I want a Miz Quote.');
 });
 
 alexaApp.intent("AMAZON.HelpIntent", {
@@ -75,7 +74,7 @@ alexaApp.intent("QuoteIntent", {
 function getRandomMizQuote(){
 	var notMizQuote = true;
 	while(notMizQuote){
-		var rand = myArray[Math.floor(Math.random() * data.length)];
+		var rand = Math.floor(Math.random() * data.length);
 		var quote = data[rand].quoteText;
 		var quoteAuthor = data[rand].quoteAuthor;
 		
