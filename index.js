@@ -3,6 +3,10 @@ var alexa = require("alexa-app");
 
 var PORT = process.env.PORT || 8081;
 var app = express();
+var http = require("http");
+setInterval(function() {
+    http.get("http://afternoon-ridge-11520.herokuapp.com/");
+}, 600000); // every 10 minutes (600000)
 
 // ALWAYS setup the alexa app and attach it to express before anything else.
 var alexaApp = new alexa.app("mizquote");
