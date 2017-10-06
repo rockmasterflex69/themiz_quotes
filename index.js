@@ -78,7 +78,7 @@ function getRandomMizQuote(){
 		var quote = data[rand].quoteText;
 		var quoteAuthor = data[rand].quoteAuthor;
 		
-		if(quote.indexOf('MIZ') > -1){
+		if(quote.indexOf('Miz') > -1){
 			return 'A quote by ' + quoteAuthor + ': ' + quote + ' ';
 		}
 		
