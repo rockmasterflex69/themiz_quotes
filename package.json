@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/rockmasterflex69/themiz_quotes/issues"
   },
-  "homepage": "https://github.com/rockmasterflex69/themiz_quotes#readme"
+  "homepage": "https://github.com/rockmasterflex69/themiz_quotes#readme",
+  "dependencies": {
+    "alexa-app": "^4.2.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.1"
+  }
 }
