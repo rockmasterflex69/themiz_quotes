@@ -27,7 +27,7 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
-  response.say('Welcome to THE MIZ!. Say: give me a miz quote. ').shouldEndSession(false);
+  response.say('Welcome to MIZ Quotes! Say: give me a miz quote. ').shouldEndSession(false);
 });
 
 alexaApp.intent("AMAZON.HelpIntent", {
@@ -35,7 +35,7 @@ alexaApp.intent("AMAZON.HelpIntent", {
     "utterances": []
   },
   function(request, response) {
-    var helpOutput = "You can say 'some statement' or ask 'some question'. You can also say stop or exit to quit.";
+    var helpOutput = "You can say 'give me a miz quote'. You can also say stop or exit to quit.";
     var reprompt = "What would you like to do?";
     // AMAZON.HelpIntent must leave session open -> .shouldEndSession(false)
     response.say(helpOutput).reprompt(reprompt).shouldEndSession(false).send();
@@ -46,7 +46,7 @@ alexaApp.intent("AMAZON.StopIntent", {
     "slots": {},
     "utterances": []
   }, function(request, response) {
-    var stopOutput = "Don't You Worry. I'll be back.";
+    var stopOutput = "You are cordially dis-mizzed.";
     response.say(stopOutput);
   }
 );
@@ -55,7 +55,7 @@ alexaApp.intent("AMAZON.CancelIntent", {
     "slots": {},
     "utterances": []
   }, function(request, response) {
-    var cancelOutput = "No problem. Request cancelled.";
+    var cancelOutput = "No problem. The miz doesnt need you anyway. ";
     response.say(cancelOutput);
   }
 );
