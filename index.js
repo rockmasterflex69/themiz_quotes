@@ -27,7 +27,7 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
-  response.say('Welcome to Random Miz Quotes. You can say: I want a Miz Quote.');
+  response.say(getRandomMizQuote);
 });
 
 alexaApp.intent("AMAZON.HelpIntent", {
